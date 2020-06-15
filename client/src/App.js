@@ -31,15 +31,13 @@ const App = () => {
   return (
     <div>
       <SavedList list={savedList} />
-      {/* <Link to="/">MovieList</Link>
-      <Link to="/movies/:movieId">Movie</Link> */}
 
       <Switch>
-        <Route path="/">
-          <MovieList movies={movieList} />
-        </Route>
         <Route path="/movies/:movieId">
           <Movie />
+        </Route>
+        <Route path="/">
+          <MovieList movies={movieList} />
         </Route>
       </Switch>
     </div>
